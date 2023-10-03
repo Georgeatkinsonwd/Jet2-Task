@@ -1,0 +1,176 @@
+$font-stack: Open Sans,sans-serif;
+$dark-blue : #203240;
+$light-grey: #F2F2F2;
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    height:100%;
+    width:100%;
+}
+
+body{
+    font-family: $font-stack;
+    background-color:#636F79;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.openModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .openModal--button{
+        height: 50px;
+    }
+
+}
+
+.modal{
+    display:flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    width:100%;
+    background-color: $light-grey
+}
+
+.modalTop{
+    width:100%;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    padding: 15px;
+
+    .modalTop__title{
+        display:flex;
+        padding-left:10px;
+        font-size:20px;
+        margin-bottom:-25px;
+    }
+    
+    .modalTop__title--color{
+        color: $dark-blue;
+    }
+    
+    .modalTop__text{
+        font-size: 18px;
+        line-height: 1.25;
+        padding-left:15px;
+    }
+    
+    .modalTop__text--color{
+        color: #777;
+    }
+    
+    .modalTop--tick {
+        width:35px;
+        height:35px;
+        margin-top:15px;
+        margin-right:7px;
+    }
+
+
+}
+
+
+.modalBottom{
+    display:flex;
+    width: 90%;
+    height:100%;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .modalBottom__button{
+        font-size:18px;
+        padding: 0.8rem 1.4rem;
+        font-weight: 900;
+        border-radius: 5px;
+        text-align:center;
+        margin: 5px;
+        border: 2px solid #203420;
+        font-style:italic;
+        cursor: pointer;
+    }
+
+
+    .modalBottom__button--dark{
+        background-color:#203240;
+        color: white;
+    }
+
+    .modalBottom__button--light{
+        background-color: $light-grey;
+        color : #203420;
+       
+    }
+  }
+
+.modal--hidden{
+    display:none;
+}
+
+
+
+@media screen and (min-width: 650px) {
+
+
+.modal{
+    position:unset;
+    bottom: unset;
+    width: 85%;
+}
+
+
+.modalTop{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    margin-top: 20px;
+
+
+    .modalTop__title{
+        font-size:30px;
+        width:80%;
+        margin-bottom:-25px;
+    }
+
+
+    .modalTop__text{
+        font-size:26px;
+        width:85%;
+    }
+
+    .modalTop--tick{
+        height:50px;
+        width:50px;
+        margin-top:25px;
+    }
+}
+
+
+.modalBottom{
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 15px;
+
+    .modalBottom__button{
+        height:50px;
+        width:250px;
+
+    }
+
+}
+
+
+
+}
